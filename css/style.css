@@ -1,0 +1,520 @@
+@import url(fontes.css);
+
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Keyframe*/
+@keyframes change-background {
+  from{
+    background: transparent;
+  }
+  to {
+    background: rgba(0,0,0,0.9);
+  }
+}
+@keyframes exibe-logo-pesquisa {
+  from{
+    margin-top: -5%;
+  }
+  to {
+    margin-top: 5%;
+  }
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    background: #5685C4; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+}
+/*Código*/
+.geral{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	font-family: 'Poppins', sans-serif;
+}
+.content{
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 0px;
+}
+.topo{
+	width: 95%;
+	height: 4em;
+	padding: 0.5em 2.5%;
+	background: #fff;
+	line-height: 4em;
+}
+.left{
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+.left img{
+	height: 100%;
+}
+.logo-right{
+	float: left;
+	width: 58%;
+	padding-left: 5%;
+	text-align: left;
+}
+.logo-right ul li{
+	display: inline;
+	padding-right: 40px;
+}
+.menu ul li a{
+	color: #007EBF;
+	padding: 1.8em 5px;
+	text-decoration: none;
+}
+.active{
+	background: #5685C4;
+	color: #fff !important;
+}
+.logo-right ul li:last-child{
+	padding-right: 0px;
+}
+.right{
+	width: 20%;
+	padding-right: 2%;
+	text-align: right;
+	float: left;
+}
+.right ul li{
+	display: inline;
+}
+.conteudo{
+	background: #5685C4;
+	height: 450px;
+	background-image: url(../img/mapa.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto 450px;
+	color: #fff;
+}
+.principal{
+	width: 90%;
+	padding: 8% 0% 0% 10%;
+	line-height: 40px;
+}
+.principal h1{
+	font-size: 40px;
+}
+.principal h2{
+	font-size: 38px;
+}
+.principal form{
+	z-index: 3;
+	margin-top: 0%;
+	transition: 0.5s;
+}
+.principal form input[type="text"]{
+	margin-top: 20px;
+	width: 50%;
+	border-radius: 2px;
+	background: #fff;
+	height: 30px;
+	padding: 5px 10px;
+	border: none;
+	outline: none;
+	transition: 0.5s;
+	font-size: 14px;
+}
+.principal form input[type="submit"]{
+	width: 80px;
+	height: 41px;
+	border: none;
+	border-radius: 2px;
+	background: rgba(255,255,255,0.1);
+	color: #fff;
+	font-weight: bold;
+	transition: 0.5s;
+}
+.principal form input[type="submit"]:hover{
+	background: rgba(255,255,255,0.3);
+	cursor: pointer;
+}
+.tags-sugeridas{
+	z-index: 3;
+	margin-top: 0%;
+	transition: 0.5s;
+	font-size: 13px;
+}
+.tags-sugeridas small{
+	text-decoration: underline;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.tags-sugeridas small:first-child{
+	margin-left: 0px;
+	cursor: auto;
+}
+.tags-su-title{
+	text-decoration: none !important;
+}
+.infos{
+	height: 350px;
+	padding: 5%;
+}
+.box-infos{
+	width: 100%;
+	height: auto;
+}
+.img-infos{
+	float: left;
+	width: 7%;
+	height: 80px;
+}
+.box-infos img{
+	width: 100%;
+}
+.content-infos{
+	float: left;
+	width: 50%;
+	padding-left: 2%; 
+	height: 120px;
+	line-height: 40px;
+}
+.content-infos h3{
+	font-size: 23px;
+}
+.sobre{
+	width: 37%;
+	height: 100%;
+	border-left: 1px #ccc solid;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: right;
+	overflow: hidden;
+}
+.sobre h3{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.sobre p{
+	font-size: 16px;
+	line-height: 24px;
+	text-align: justify;
+}
+footer{
+	width: 95.6%;
+	min-height: 130px;
+	height: auto;
+	text-align: left;
+	background: #3167b0;
+	color: #fff;
+	padding: 30px;
+}
+.fleft{
+	width: 33%;
+	float: left;
+}
+.fleft p{
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.fleft a, .btn-map a{
+	text-decoration: none;
+	color: #fff;
+}
+.fleft ul li{
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+.fmid{
+	width: 33%;
+	float: left;
+	text-align: justify;
+}
+.fmid span{
+	font-size: 12px;
+}
+.fright{
+	width: 33%;
+	float: left;
+	text-align: right;
+}
+.login-bk{
+	float: left;
+	width: 50%;
+	padding: 5%;
+	height: 447px;
+	background: #5685C4;
+	color: #fff;
+}
+.login-bk h3{
+	font-size: 32px;
+	line-height: 40px;
+}
+.login-bk ul{
+	margin-top: 40px;
+}
+.login-bk ul li{
+	line-height: 40px;
+	list-style: initial;
+}
+.login-bk p{
+	line-height: 200px;
+}
+.bx-login{
+	float: right;
+	width: 30%;
+	padding: 5%;
+	border-top: 1px #fafafa solid;
+}
+.bx-login label, .bx-login input{
+	display: block;
+	line-height: 30px;
+}
+.bx-login input, .btn-map{
+	width: 100%;
+	height: 15px;
+	border: none;
+	padding: 10px;
+	border-bottom: 2px #ccc solid;
+	background: #fafafa;
+	border-radius: 2px;
+}
+.bx-login input[type="submit"], .btn-map{
+	width: 30%;
+	margin-top: 30px;
+	background: #5685C4;
+	font-size: 14px;
+	height: 35px;
+	color: #fff;
+	font-weight: bold;
+	border-bottom: none;
+	margin-bottom: 40px;
+	padding: initial;
+}
+.bx-login h1{
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+.bx-login a{
+	text-decoration: none;
+	color: #000;
+}
+.recuperar-senha{
+	display: none;
+}
+.exibe{
+	display: block;
+}
+.oculta{
+	display: none;
+}
+.formloc{
+	position: fixed;
+	width: 90%;
+	margin-top: -8% !important;
+}
+.sugeridosloc{
+	position: fixed;
+	width: 90%;
+	margin-top: -3% !important;
+}
+.oc{
+	display: none;
+}
+.back{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	animation: change-background 1s ease;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	text-align: center;
+}
+.aumenta{
+	width: 80% !important;
+}
+.back img{
+	width: 300px;
+	animation: exibe-logo-pesquisa 0.5s ease;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+.recomendados{
+	margin: 10% auto 0%;
+	width: 90%;
+	height: 40%;
+	text-align: left;
+}
+.recomendados p{
+	font-size: 16px;
+	color: #fff;
+}
+.box-recomendados{
+	float: left;
+	border: 1px #fff solid;
+	height: 90%;
+	width: 16.23%;
+	margin-right: 2%;
+	padding: 1%;
+	background: #fff;
+	border-radius: 2px;
+}
+.box-recomendados:last-child{
+	margin-right: 0%;
+}
+.box-recomendados p{
+	text-align: center;
+}
+.formulario{
+	float: inherit;
+	width: 40%;
+	margin: 0% auto;
+	height: auto;
+	border-radius: 5px;
+	padding: 5%;
+	background: #fff;
+}
+.formulario h1{
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+.formulario h3{
+	text-align: right;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+input:focus{
+	border-bottom: 2px #5685C4 solid;
+}
+.conteudonormal{
+	border-top: 1px #fafafa solid;
+	min-height: 450px;
+	height: auto;
+	width: 90%;
+	padding: 2% 5%;
+}
+.conteudonormal h1{
+	font-size: 23px;
+	margin-bottom: 1em;
+}
+.conteudonormal table{
+	width: 100%;
+	text-align: left;
+}
+.conteudonormal table th{
+	padding: 5px;
+	background: #5685C4;
+	color: #fff;
+}
+ .conteudonormal table td{
+ 	padding: 10px 5px;
+ 	background: transparent;
+ 	color: #000;
+ 	border-bottom: 1px #ccc solid;
+ }
+.conteudonormal table td a{
+	text-decoration: none;
+	color: #000;
+}
+.conteudonormal table th:first-child{
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.conteudonormal table th:last-child{
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+.conteudonormal input, .conteudonormal select{
+	margin-bottom: 20px;
+	border-radius: 2px;
+	height: 30px;
+	padding: 5px;
+	border: 1px #5685C4 solid;
+	outline: none;
+	transition: 0.5s;
+	font-size: 14px;
+}
+.conteudonormal iframe{
+	width: 100%;
+	min-height: 600px;
+	margin-top: 2em;
+	border-radius: 5px;
+}
+.cadastro table{
+	margin-top: 2.7em;
+}
+.cadastro table td{
+	border-bottom: none;
+}
+.cadastro table td label{
+	display: block;
+}
+.cadastro table td input{
+	width: 80%;
+	height: 15px;
+	border: none;
+	padding: 10px;
+	border-bottom: 2px #ccc solid;
+	background: #fafafa;
+	border-radius: 2px;
+	margin-top: 5px;
+}
+.cadastro table td input[type="submit"]{
+	width: 150px;
+	height: 40px;
+	border: none;
+	background: #5685C4;
+	border-radius: 2px;
+	color: #fff;
+	transition: 0.5s;
+	margin-top: 0px;
+}
